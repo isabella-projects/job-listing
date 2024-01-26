@@ -2,7 +2,7 @@
     <img src="https://i.imgur.com/YlGrpaq.png" width="800px" height="auto">
 </div>
 
-# 🌐 E-Commerce Clothing
+# 🌐 Workopia - Job Listing Platform
 
 # 🛠 Tech Stack
 
@@ -21,13 +21,13 @@
 **Clone the project**
 
 ```bash
-  git clone https://github.com/isabella-projects/ecommerce-clothing
+  git clone https://github.com/isabella-projects/workopia.git
 ```
 
 **Go to the project directory**
 
 ```bash
-  cd ecommerce-clothing
+  cd workopia
 ```
 
 **Run a local server, like Laragon, xampp, mampp and etc.**
