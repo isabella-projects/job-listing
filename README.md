@@ -19,24 +19,24 @@
 
 # 🧪 Run Locally
 
-**Clone the project**
+## Clone the project
 
 ```bash
   git clone https://github.com/isabella-projects/workopia.git
 ```
 
-**Go to the project directory**
+## Go to the project directory
 
 ```bash
   cd workopia
 ```
 
-**Run a local server, like Laragon, xampp, mampp and etc.**
+## Run a local server, like Laragon, xampp, mampp and etc.
 
-**Set root path to:**
+## Set root path to:
 
 ```bash
   /public
 ```
 
-**Start the server**
+# 🧪 Start the server
