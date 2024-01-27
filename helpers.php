@@ -16,11 +16,12 @@ function basePath($path = '')
  * @param string $name
  * @return void
  */
-function loadView($name)
+function loadView($name, $data = [])
 {
     $viewPath = basePath("views/{$name}.view.php");
 
     if (file_exists($viewPath)) {
+        extract($data);
         require $viewPath;
     } else {
         echo "View '{$name} not found!'";
@@ -67,4 +68,42 @@ function inspectAndDie($value)
     echo '<pre>';
     die(var_dump($value));
     echo '</pre>';
+}
+
+/**
+ * Format the tags with uppercase
+ *
+ * @param mixed $tags
+ * @return string
+ */
+function formatTags($tags)
+{
+    $tagArray = explode(',', $tags);
+    $capitalizedTags = array_map('ucwords', $tagArray);
+    return implode(', ', $capitalizedTags);
+}
+
+/**
+ * Format salary with currency
+ *
+ * @param string $salary
+ * @param string $currency
+ * @return void
+ */
+function formatSalary($salary, $currency = 'EUR')
+{
+    $formattedSalary = number_format($salary, 0, '.', ',');
+
+    $currencySymbols = [
+        'EUR' => '€',
+        'USD' => '$',
+        'GBP' => '£',
+        'BGR' => 'лв.',
+    ];
+
+    if ($currency === 'BGR') {
+        return $formattedSalary . ' ' . $currencySymbols[$currency];
+    } else {
+        return $currencySymbols[$currency] . '' . $formattedSalary;
+    }
 }
