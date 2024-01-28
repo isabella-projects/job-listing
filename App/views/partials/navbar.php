@@ -1,7 +1,7 @@
 <!-- Nav -->
 <header class="bg-blue-900 text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl font-semibold">
+        <h1 class="text-2xl sm:text-sm font-semibold">
             <a href="/">Workopia</a>
         </h1>
         <nav class="space-x-4">

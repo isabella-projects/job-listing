@@ -32,9 +32,11 @@
                 <li class="mb-2">
                     <strong>Bundesland:</strong> <?= $listing->state ?>
                 </li>
-                <li class="mb-2">
-                    <strong>Tags:</strong> <?= formatTags($listing->tags) ?>
-                </li>
+                <?php if (!empty($listing->tags)) : ?>
+                    <li class="mb-2">
+                        <strong>Tags:</strong> <?= formatTags($listing->tags) ?>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
