@@ -1,0 +1,21 @@
+{
+    "name": "isabella-projects/workopia",
+    "description": "Job listing application",
+    "homepage": "https://github.com/isabella-projects",
+    "license": "",
+    "authors": [
+        {
+            "name": "Isabella Projects",
+            "email": "damian4oy@gmail.com",
+            "homepage": "https://github.com/isabella-projects",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    },
+    "time": "2024-01-28"
+}
