@@ -96,6 +96,10 @@ class ListingController
             }
         }
 
+        if (!isset($newListingData['salary']) || (!Validation::numeric($newListingData['salary']) && !empty($newListingData['salary']))) {
+            $errors['salary'] = empty($newListingData['salary']) ? 'Salary is required' : 'Salary must be a number';
+        }
+
         if (!empty($errors)) {
             // Reload view with errors
             loadView('listings/create', [
@@ -155,6 +159,9 @@ class ListingController
         }
 
         $this->db->query('DELETE FROM listings WHERE id = :id', $params);
+
+        // Set flash message
+        $_SESSION['success_message'] = 'Listing deleted successfully!';
 
         redirect('/listings');
     }

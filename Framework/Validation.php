@@ -23,6 +23,18 @@ class Validation
     }
 
     /**
+     * Check if input is number
+     * 
+     * @param string $value
+     * 
+     * @return bool
+     */
+    public static function numeric($value)
+    {
+        return is_numeric($value);
+    }
+
+    /**
      * Validate email address
      * 
      * @param string $value
