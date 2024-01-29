@@ -31,9 +31,9 @@
   cd workopia
 ```
 
-## Run a local server, like Laragon, xampp, mampp and etc.
+## Run a local server.
 
-## Set root path to:
+## Change root directory to:
 
 ```bash
   /public
